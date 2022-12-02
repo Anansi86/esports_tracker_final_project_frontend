@@ -10,6 +10,9 @@ function NavBar() {
         <li>
           <Link to="/">Home</Link>
         </li>
+        {/* <li>
+          <Link to="/matches">Matches</Link>
+        </li> */}
         {
           !state.currentUser && (
             <li>
