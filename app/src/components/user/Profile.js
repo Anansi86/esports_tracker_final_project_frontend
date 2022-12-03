@@ -2,15 +2,13 @@ import React from "react"
 import { useGlobalState } from "../../context/GlobalState";
 import request from "../../services/api.request";
 
-let matches = request("matches/"); //how to hit my api
-
-const Profile = () => {
+const Profile = async () => {
   const [ state, dispatch ] = useGlobalState();
 
   return (
     <div>
       <h1>{state.currentUser.user_id}</h1>
-      <p>{matches}</p>
+      <p>{state.currentUser.first_name} {state.currentUser.last_name} ({state.currentUser.username})</p>
     </div>
   )
 }
