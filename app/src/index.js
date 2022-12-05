@@ -7,6 +7,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import Profile from './components/user/Profile';
