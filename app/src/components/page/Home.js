@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useGlobalState } from "../../context/GlobalState";
 import jwtDecode from "jwt-decode";
 import { Link } from "react-router-dom";
+import Carousel from "../Carousel";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -12,7 +13,7 @@ const Home = () => {
 
   return (
     <div className="row">
-    <div className="col-sm-6">
+    <div className="col-sm-4">
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">login</h5>
@@ -22,7 +23,10 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className="col-sm-6">
+    <div className="col-sm-4">
+    <Carousel />
+    </div>
+    <div className="col-sm-4">
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">New User</h5>

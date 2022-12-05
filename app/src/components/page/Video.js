@@ -13,7 +13,7 @@ const Video = () => {
     <div className="col-sm-6">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">{state.currentUser.username}</h5>
+          <h5 className="card-title">''</h5>
           <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
           <p></p>
           <Link to="/Login" className="btn btn-primary">Click Here</Link>

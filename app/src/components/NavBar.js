@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom";
 import { useGlobalState } from "../context/GlobalState";
 import logo from "/workspace/esports_tracker_final_project_frontend/app/src/img/Logo.png";
 
@@ -73,4 +73,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBar;*/
