@@ -6,15 +6,15 @@ import jwtDecode from "jwt-decode";
 
 const Login = () => {
   let navigate = useNavigate();
-
+  
   const [ state, dispatch ] = useGlobalState();
-
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  
   const handleLogin = (e) => {
     e.preventDefault();
-
+    
     AuthService
       .login(username, password)
       .then(async (resp) => {
@@ -26,6 +26,7 @@ const Login = () => {
         navigate('/Home'  )
       });
   }
+
 
   return (
     <div className="c-form">

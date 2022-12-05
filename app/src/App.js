@@ -4,8 +4,6 @@ import { GlobalProvider } from './context/GlobalState';
 import GetHeader from './components/Header';
 
 
-
-
 function App() {
   return (
     <GlobalProvider>

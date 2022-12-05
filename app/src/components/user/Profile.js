@@ -4,7 +4,7 @@ import { useGlobalState } from "../../context/GlobalState";
 const Profile = () => {
   const [ state, dispatch ] = useGlobalState();
   console.log(state.currentUser)
-  
+
   return (
     <div>
       <h1>

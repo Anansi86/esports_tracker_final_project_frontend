@@ -1,13 +1,27 @@
 import { Link } from "react-router-dom";
 import { useGlobalState } from "../context/GlobalState";
+import AuthService from "../services/auth.service";
 import logo from "/workspace/esports_tracker_final_project_frontend/app/src/img/Logo.png";
+import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 
-function GetHeader() {
-    const [state, dispatch] = useGlobalState();
+
+
+
+function GetHeader(props) {
+  
+  let navigate = useNavigate();
+  
+  const logout = () => {
+      AuthService
+          .logout()
+      navigate("/")
+  }
+  const [state, dispatch] = useGlobalState();
     
     return (
-        <div className="row">
+        <div className="row" color="orange">
       <div className="col">
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
@@ -61,7 +75,13 @@ function GetHeader() {
                     Video
                   </a>
                 </li>
+
                 {
+                    state.currentUser && (
+                <Button className="button" color="grey" onClick={() => logout()}>Logout</Button>
+                  )}
+                {
+
                     state.currentUser && (
                         <li className="nav-item">
                   <a className="nav-link" href="/profile">
@@ -91,4 +111,5 @@ function GetHeader() {
     </div>
   );
 }
+
 export default GetHeader;

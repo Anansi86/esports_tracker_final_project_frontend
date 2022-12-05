@@ -29,7 +29,7 @@ import {
   
     logout() {
       localStorage.removeItem("user");
-    }
+    } 
   
     async register({
       username,
