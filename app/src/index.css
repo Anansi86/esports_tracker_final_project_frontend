@@ -4,4 +4,6 @@
 .button {
     background-color: gray;
     scrollbar-highlight-color: white;
+    border: none;
+    outline:none;
 }

@@ -22,12 +22,11 @@ function Carousel(props) {
     allowFullScreen></iframe>
     </div>
     <div className="carousel-item">
-    <iframe src='"https://www.youtube.com/embed/_Uj-krTQzfI"'
-      //  frameBorder='0'
-        allow='autoplay; encrypted-media'
-        allowFullScreen
-        title='video'>
-          </iframe>
+    <iframe src="https://www.youtube.com/embed/_Uj-krTQzfI" 
+    title="YouTube video player" 
+    //frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen></iframe>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

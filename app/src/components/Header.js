@@ -12,13 +12,20 @@ import Button from 'react-bootstrap/Button';
 function GetHeader(props) {
   
   let navigate = useNavigate();
+
   
-  const logout = () => {
-      AuthService
-          .logout()
-      navigate("/")
-  }
   const [state, dispatch] = useGlobalState();
+
+
+  const logout = () => {
+    AuthService
+        .logout();
+      dispatch({
+        currentUserToken: null,
+          currentUser: null
+      })
+    navigate("/Home")
+}
     
     return (
         <div className="row" color="orange">
@@ -76,12 +83,7 @@ function GetHeader(props) {
                   </a>
                 </li>
 
-                {
-                    state.currentUser && (
-                <Button className="button" color="grey" onClick={() => logout()}>Logout</Button>
-                  )}
-                {
-
+                  {
                     state.currentUser && (
                         <li className="nav-item">
                   <a className="nav-link" href="/profile">
@@ -92,18 +94,21 @@ function GetHeader(props) {
               </ul>
             </div>
             {
-                !state.currentUser && (
-                    <li>
-              <Link to="/login">Login</Link>
-            </li>
-          )}
-          {
               !state.currentUser && (
-                  
-                  <li>
+                
+                <Link to="/login">Login</Link>
+            )}
+          {
+            !state.currentUser && (
+              
               <Link to="/register">Register</Link>
-            </li>
-          )}
+              
+              )}
+        {
+          state.currentUser && (
+      <Button className="button" onClick={() => logout()}>Logout</Button>
+        )}
+      
         
           </div>
         </nav>
