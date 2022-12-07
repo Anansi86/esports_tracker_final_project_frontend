@@ -1,4 +1,4 @@
-import React from "react"
+/*import React from "react"
 import { useNavigate } from 'react-router-dom';
 import { useGlobalState } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
@@ -57,4 +57,4 @@ const Landing = () => {
   )
 
 }
-export default Landing
+export default Landing */

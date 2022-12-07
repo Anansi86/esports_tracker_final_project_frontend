@@ -7,3 +7,14 @@
     border: none;
     outline:none;
 }
+
+.team_icon {
+    max-width:100%;
+}
+
+.card {
+    
+    text-align: center;
+    align-items: center;
+}
+

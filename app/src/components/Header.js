@@ -68,7 +68,7 @@ function GetHeader(props) {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Team">
+                  <a className="nav-link" href="Team_Selection">
                     Teams
                   </a>
                 </li>
@@ -104,6 +104,11 @@ function GetHeader(props) {
               <Link to="/register">Register</Link>
               
               )}
+
+              {/* {
+                state.currentUser && (
+                <p>{state.currentUser.username}</p>
+              )} */}
         {
           state.currentUser && (
       <Button className="button" onClick={() => logout()}>Logout</Button>

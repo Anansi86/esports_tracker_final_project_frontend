@@ -1,38 +1,42 @@
-import React, { useState } from "react"
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
+import request from "../../services/api.request";
 
 const Team_Selection = () => {
-  let navigate = useNavigate();
+  const [teams, setTeams] = useState([]);
 
-  const [ state, dispatch ] = useGlobalState();
+  useEffect(() => {
+    async function getData() {
+      const responseTeam = await request({
+        method: "GET",
+        url: "Team/",
+      });
 
+      setTeams(responseTeam.data);
+    }
+    getData();
+  }, []);
 
-return (
-  <div className="row">
-  <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">login</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <p></p>
-        <Link to="/Login" className="btn btn-primary">Click Here</Link>
+  return (
+    <div className="container">
+      <div className="row">
+        {teams.map((team) => {
+          return (
+            <div className="col-3">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">{team.name}</h5>
+                  <img className="team_icon" src={team.icon} alt="team_icon" />
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
-  </div>
-  <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">New User</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" className="btn btn-primary">Register</a>
-      </div>
-    </div>
-  </div>
-</div>
-  )
-}
+  );
+};
 
-
-export default Team_Selection
+export default Team_Selection;
