@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
-function GetHeader(props) {
+function GetHeader() {
   
   let navigate = useNavigate();
 

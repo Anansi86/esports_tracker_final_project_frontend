@@ -31,12 +31,13 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="Landing" element={<Landing />} />
+          {/* <Route path="Landing" element={<Landing />} /> */}
           <Route path="Home" element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Team_Selection" element={<Team_Selection />} />
           <Route path="Video" element={<Video />} />
           <Route path="Team" element={<Team />} />
+          <Route path="Team/:id" element={<Team />} />
           <Route path="Player" element={<Player />} />
           <Route path="Schedule" element={<Schedule />} />
           <Route path="Character" element={<Character />} />

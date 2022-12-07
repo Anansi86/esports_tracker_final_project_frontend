@@ -1,10 +1,12 @@
 import React, { useEffect,useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import { useGlobalState } from "../../context/GlobalState";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 const Team = () => {
+
+  // let { id } = useParams();
 
   useEffect(() => {
     async function getData() {
@@ -20,9 +22,9 @@ const Team = () => {
     getData()
   },[])
 
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  const [ state, dispatch ] = useGlobalState();
+  // const [ state, dispatch ] = useGlobalState();
   return (
     <div className="row">
     <div className="col-sm-6">
