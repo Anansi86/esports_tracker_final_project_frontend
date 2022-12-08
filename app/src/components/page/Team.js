@@ -1,18 +1,21 @@
-import React, { useEffect,useState } from "react"
-import { useNavigate } from 'react-router-dom';
-import { useGlobalState } from "../../context/GlobalState";
+import React, { useEffect, useState } from "react"
+// import { useNavigate } from 'react-router-dom';
+// import { useGlobalState } from "../../context/GlobalState";
 import { Link, useParams } from "react-router-dom";
-
+import request from "../../services/api.request";
 
 const Team = () => {
 
-  // let { id } = useParams();
+  const [ team, setTeam ] = useState({});
 
+  let { id } = useParams();
+    
+    
   useEffect(() => {
     async function getData() {
       const responseTeam = await request({
         method: "GET",
-        url: "Team/",
+        url: "Team/" + id + "/",
       });
       
       
@@ -30,15 +33,15 @@ const Team = () => {
     <div className="col-sm-6">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">login</h5>
-          <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <h5 className="card-title">{team.name}</h5>
           <p></p>
-          <Link to="/Login" className="btn btn-primary">Click Here</Link>
+          <img className="team_icon" href="Home" src={team.icon} alt="team_icon" />
         </div>
       </div>
     </div>
   </div>
   )
 }
+
 
 export default Team;

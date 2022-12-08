@@ -13,7 +13,7 @@ import './index.css';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import Profile from './components/user/Profile';
-import Landing from './components/page/Landing';
+// import Landing from './components/page/Landing';
 import Home from './components/page/Home';
 import About from './components/page/About';
 import Team_Selection from './components/page/Team_Selection';

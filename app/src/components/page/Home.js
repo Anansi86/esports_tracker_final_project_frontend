@@ -23,10 +23,10 @@ const Home = () => {
       const responseHero = await request({
         method: "GET",
         url: "Hero/"
-      })
+      });
       
-      setMatches(responseMatch.data)
-      setHeroes(responseHero.data)
+      setMatches(responseMatch.data);
+      setHeroes(responseHero.data);
       
     }
     getData()

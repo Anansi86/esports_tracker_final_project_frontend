@@ -6,9 +6,9 @@ import jwtDecode from "jwt-decode";
 import { Link } from "react-router-dom";
 
 const About = () => {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  const [ state, dispatch ] = useGlobalState();
+  // const [ state, dispatch ] = useGlobalState();
 
   return (
     <div className="row">

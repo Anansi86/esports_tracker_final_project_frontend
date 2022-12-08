@@ -32,7 +32,7 @@ function GetHeader() {
       <div className="col">
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
-            <Link to="home">
+            <Link to="/home">
             <img
               style={{ width: "100px", height: "100px" }}
               className="navbar-brand"
@@ -54,21 +54,21 @@ function GetHeader() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="nav-link active"
                     aria-current="page"
-                    href="Home"
+                    to="/Home"
                     >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="About">
+                  <a className="nav-link" href="/About">
                     About
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Team_Selection">
+                  <a className="nav-link" href="/Team_Selection">
                     Teams
                   </a>
                 </li>
