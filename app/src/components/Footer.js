@@ -1,7 +1,4 @@
 
-
-
-
 const Footer = () => <footer className="page-footer font-small blue pt-4">
 <div className="container-fluid text-center text-md-left">
     <div className="row">
@@ -18,13 +15,25 @@ const Footer = () => <footer className="page-footer font-small blue pt-4">
         <hr className="clearfix w-100 d-md-none pb-0"/>
 
         <div className="col-md-4 mb-md-0 mb-3">
-            <h5 className="text-uppercase">Links</h5>
-            <ul className="list-unstyled">
+            <h5 className="text-uppercase">Social Media</h5>
+            
+            <p>
+            
+            </p>
+            
+            {/* <img
+              style={{ width: "100px", height: "100px" }}
+              className="navbar-brand"
+              href="Home"
+              src=
+              ></img> */}
+            
+            {/* <ul className="list-unstyled">
                 <li><a href="#!"></a></li>
                 <li><a href="#!"> 2</a></li>
                 <li><a href="#!">Link 3</a></li>
                 <li><a href="#!">Link 4</a></li>
-            </ul>
+            </ul> */}
         </div>
 
         <div className="col-md-4 mb-md-0 mb-3">

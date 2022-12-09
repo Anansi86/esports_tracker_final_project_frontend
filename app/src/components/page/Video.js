@@ -1,37 +1,55 @@
-import React, { useState } from "react"
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
 
 const Video = () => {
   let navigate = useNavigate();
 
-  const [ state, dispatch ] = useGlobalState();
+  const [state, dispatch] = useGlobalState();
 
   return (
     <div className="row">
-    <div className="col-sm-6">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">''</h5>
-          <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <p></p>
-          <Link to="/Login" className="btn btn-primary">Click Here</Link>
+      <div className="col-sm-6">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Blake Scott</h5>
+            <img
+              className="player-image"
+              src="http://images.blz-contentstack.com/v3/assets/blt321317473c90505c/blt3df8323ae84dfcd3/6273f664ac712c24bbaef8e3/ATL_GATOR_C_22.png"
+            ></img>
+          </div>
+        </div>
+      </div>
+      <div className="col-sm-6">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Alias</h5>
+            <p>Gator</p>
+            <h5>#1</h5>
+            <h5 className="card-text">From:</h5>
+            <p>Nashville, Tennessee, USA</p>
+            <a href="#" className="btn btn-primary">
+              Register
+            </a>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">Average Atk</div>
+              <div class="col">Avg Eliminations</div>
+              <div class="col">Deaths</div>
+            </div>
+
+          <div class="row">
+            <div class="col">43099</div>
+            <div class="col">118</div>
+            <div class="col">36</div>
+          </div>
+          </div>
         </div>
       </div>
     </div>
-    <div className="col-sm-6">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">New User</h5>
-          <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" className="btn btn-primary">Register</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  )
+  );
+};
 
-}
-
-export default Video
+export default Video;

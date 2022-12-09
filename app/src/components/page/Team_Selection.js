@@ -16,8 +16,10 @@ const Team_Selection = () => {
       });
 
       setTeams(responseTeam.data);
+      console.log(responseTeam.data)
     }
     getData();
+    
   }, []);
 
   return (
