@@ -4,6 +4,7 @@ import { useGlobalState } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
 import request from "../../services/api.request";
 
+
 const Team_Selection = () => {
   const [teams, setTeams] = useState([]);
 
@@ -15,8 +16,10 @@ const Team_Selection = () => {
       });
 
       setTeams(responseTeam.data);
+      console.log(responseTeam.data)
     }
     getData();
+    
   }, []);
 
   return (
@@ -28,7 +31,9 @@ const Team_Selection = () => {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">{team.name}</h5>
-                  <img className="team_icon" src={team.icon} alt="team_icon" />
+                    <Link to={"/Team/" + team.id}>
+                    <img className="team_icon" href="Home" src={team.icon} alt="team_icon" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -38,5 +43,4 @@ const Team_Selection = () => {
     </div>
   );
 };
-
 export default Team_Selection;

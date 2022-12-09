@@ -1,5 +1,5 @@
 
-function Carousel(props) {
+function Carousel() {
   
   return(
   <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">

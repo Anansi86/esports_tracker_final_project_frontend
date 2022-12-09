@@ -13,7 +13,7 @@ import './index.css';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import Profile from './components/user/Profile';
-import Landing from './components/page/Landing';
+// import Landing from './components/page/Landing';
 import Home from './components/page/Home';
 import About from './components/page/About';
 import Team_Selection from './components/page/Team_Selection';
@@ -31,12 +31,13 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="Landing" element={<Landing />} />
+          {/* <Route path="Landing" element={<Landing />} /> */}
           <Route path="Home" element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Team_Selection" element={<Team_Selection />} />
           <Route path="Video" element={<Video />} />
           <Route path="Team" element={<Team />} />
+          <Route path="Team/:id" element={<Team />} />
           <Route path="Player" element={<Player />} />
           <Route path="Schedule" element={<Schedule />} />
           <Route path="Character" element={<Character />} />
