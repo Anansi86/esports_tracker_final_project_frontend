@@ -21,7 +21,7 @@ const Team_Selection = () => {
     getData();
     
   }, []);
-
+  
   return (
     <div className="container">
       <div className="row">

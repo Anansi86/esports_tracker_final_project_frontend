@@ -1,17 +1,17 @@
 
 
 
-// function PlayerList(props) {
+function PlayerList(props) {
 
-//     return(
+    return(
         
-//         <div class="list-group">
-//         <button type="button" class="list-group-item list-group-item-action active">
-//             Player
-//         </button>
-//         <button type="button" class="list-group-item list-group-item-action">player name:{props.item.player_name}</button>  
-//     </div>
-//     )
-// }
+        <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active">
+            Player
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">player name:{props.item.player_name}</button>  
+    </div>
+    )
+}
 
-// export default PlayerList;
+export default PlayerList;

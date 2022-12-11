@@ -13,8 +13,8 @@ function App() {
           <h1>{process.env.REACT_APP_MYENVVAR}</h1>
           <Outlet />
         </div>
-        <Footer />
       </div>
+        <Footer />
     </GlobalProvider>
   );
 }
