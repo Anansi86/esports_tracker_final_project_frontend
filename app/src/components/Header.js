@@ -29,8 +29,8 @@ function GetHeader() {
     
     return (
         <div className="row" color="orange">
-      <div className="col">
-        <nav className="navbar navbar-expand-lg bg-light">
+      <div className="col" style={{height: '100px'}}>
+        <nav className="navbar navbar-expand-lg bg-light" style={{position: 'fixed', height: '100px', width: '100%', top: 0, left:0, 'zIndex': 9999}}>
           <div className="container-fluid">
             <Link to="/home">
             <img
@@ -73,12 +73,12 @@ function GetHeader() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Schedule">
+                  <a className="nav-link" href="/Schedule">
                     Schedule
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Video">
+                  <a className="nav-link" href="/Video">
                     Video
                   </a>
                 </li>

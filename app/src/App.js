@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <GlobalProvider>
-      <div className="d-flex justify-content-between flex-column vh-100">
+      <div className="d-flex flex-column vh-100">
         <GetHeader />
         <div className="overflow-scroll">
           <h1>{process.env.REACT_APP_MYENVVAR}</h1>

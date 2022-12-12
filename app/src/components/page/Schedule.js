@@ -1,38 +1,50 @@
-import React, { useState } from "react"
-import AuthService from "../../services/auth.service";
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../context/GlobalState";
-import jwtDecode from "jwt-decode";
 import { Link } from "react-router-dom";
+import request from "../../services/api.request";
 
 const Schedule = () => {
-  let navigate = useNavigate();
+  const [match, setMatch] = useState([]);
 
-  const [ state, dispatch ] = useGlobalState();
+  useEffect(() => {
+    async function getData() {
+      const responseMatch = await request({
+        method: "GET",
+        url: "Match/",
+      });
+
+      setMatch(responseMatch.data);
+      console.log(responseMatch.data);
+    }
+    getData();
+  }, []);
 
   return (
-    <div className="row">
-    <div className="col-sm-4">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">login</h5>
-          <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <p></p>
-          <Link to="/Login" className="btn btn-primary">Click Here</Link>
-        </div>
+    <div className="container">
+      <div className="row">
+        <div className="col">Date</div>
+        <div className="col">Score</div>
+        <div className="col">Watch</div>
       </div>
+      {match.map((match) => {
+        return (
+          <div className="row"  id="schedule">
+            <div className="col schedule_column">{match.game_date}</div>
+            <div className="col schedule_column" id="team1"> <img className="team_icon" src={match.team1.icon} id="team_icon" />
+              {match.team1.name} </div>
+              <div className="col-1 point_column">{match.scores[0].team1_score} - {match.scores[0].team2_score}</div>
+            <div className="col schedule_column" id="team2">{match.team2.name} 
+              <img className="team_icon" src={match.team2.icon} id="team_icon" />
+            </div>
+            <div className="col replay">
+              <a className="btn btn-secondary" target="_blank" href={match.video_url}>replay</a>
+            </div>
+          </div>
+        );
+      })}
     </div>
-    <div className="col-sm-4">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">New User</h5>
-          <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" className="btn btn-primary">Register</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Schedule
+export default Schedule;

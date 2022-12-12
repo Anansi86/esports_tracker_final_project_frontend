@@ -22,3 +22,31 @@
     max-width:100%;
 }
 
+
+
+#team_icon {
+   height: 80%;
+   width: auto;
+}
+
+.schedule_column {
+    height: 100px;
+}
+
+#team1 {
+    text-align: right;
+}
+
+#team2 {
+    text-align: left;
+}
+
+.point_column{
+    height: 50px;
+    text-align: center;
+    align-self: center;
+}
+
+.col.replay {
+    align-items: right;
+}
