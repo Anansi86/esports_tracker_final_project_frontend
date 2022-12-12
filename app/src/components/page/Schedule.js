@@ -44,6 +44,20 @@ const Schedule = () => {
         );
       })}
     </div>
+    {/* <table className="table table-dark">
+    <thead />
+    <tbody>
+      <tr className="table-active" />
+      <tr />
+      <tr>
+        <th scope="row">3</th>
+        <td colSpan={2} className="table-active">
+          Larry the Bird
+        </td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table> */}
     </div>
   );
 };

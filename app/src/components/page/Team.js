@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import request from "../../services/api.request";
 import _ from "lodash";
-import 'bootstrap/dist/js/bootstrap.js';
+
 
 const Team = () => {
   const [team, setTeam] = useState({});
@@ -26,7 +26,11 @@ const Team = () => {
   //const list = player.map((item) => <PlayerList item={item} />);
 
   const playerList = team.players?.map((tm) => {
-    return <Link to={'/player/' + tm.id} key={tm.id} className="row">{tm.player_name}</Link>;
+    return (
+      <button to={"/player/" + tm.id} key={tm.id} className="row">
+        {tm.player_name}
+      </button>
+    );
   });
 
   return (
@@ -45,13 +49,13 @@ const Team = () => {
         </div>
       </div>
       <div className="col-sm-6">
-      <div className="list-group">
-        <button type="button" className="list-group-item list-group-item-action">
-        {playerList}
-        </button>
-      </div>   
+        <div className="list-group">
+          
+            {playerList}
+
+        </div>
       </div>
-  </div>
+    </div>
   );
 };
 
