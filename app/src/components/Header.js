@@ -105,10 +105,10 @@ function GetHeader() {
               
               )}
 
-              {/* {
+              {
                 state.currentUser && (
                 <p>{state.currentUser.username}</p>
-              )} */}
+              )}
         {
           state.currentUser && (
       <Button className="button" onClick={() => logout()}>Logout</Button>

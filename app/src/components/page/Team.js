@@ -49,8 +49,8 @@ const Team = () => {
         <button type="button" className="list-group-item list-group-item-action">
         {playerList}
         </button>
-     </div>   
-     </div>
+      </div>   
+      </div>
   </div>
   );
 };

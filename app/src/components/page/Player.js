@@ -22,7 +22,6 @@ const Player = () => {
       setPlayer(responsePlayer.data);
       console.log(responsePlayer.data)
 
-
     }
     getData();
   }, []);
