@@ -51,7 +51,26 @@
     text-align: right;
 }
 
-#carousel iframe {
+/* #carousel iframe {
     width: 100%;
     height: 100%;
+} */
+
+.rein {
+    width: 200px;
+    height: 278px;
+}
+
+.tracer {
+    width: 200px;
+    height: 278px;
+}
+
+.homecard {
+    max-width: 100%;
+}
+
+.banner {
+    height: 65%;
+    width: 100%;
 }
