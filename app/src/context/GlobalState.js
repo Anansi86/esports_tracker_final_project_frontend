@@ -1,10 +1,10 @@
+import jwtDecode from 'jwt-decode'
 import React, {
     createContext,
     useReducer,
     useContext,
   } from 'react';
   
-  import jwtDecode from 'jwt-decode'
   
   let user = JSON.parse(localStorage.getItem('user'))
   

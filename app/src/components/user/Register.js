@@ -1,11 +1,26 @@
 import React, { useState } from "react"
 import AuthService from "../../services/auth.service";
+import { useNavigate } from 'react-router-dom';
+import { useGlobalState } from "../../context/GlobalState";
+import jwtDecode from "jwt-decode";
 
 const Register = () => {
+  let navigate = useNavigate();
+
+  const [ dispatch ] = useGlobalState();
+
   const [user, setUser] = useState({
     username: "",
     password: "",
     passwordConf: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+  })
+
+  const [errors, setErrors] = useState({
+    username: "",
+    password: "",
     firstName: "",
     lastName: "",
     email: "",
@@ -21,6 +36,17 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     AuthService.register(user)
+      .then(async (resp) => {
+        console.log(resp);
+        let data = jwtDecode(resp.access)
+        await dispatch({
+          currentUserToken: resp.access,
+          currentUser: data
+        })
+        navigate('/profile')
+      }).catch(function(resp) {
+            setErrors(resp.data)
+      });
   }
 
   return (
@@ -45,6 +71,9 @@ const Register = () => {
             onChange={(e) => handleChange('email', e.target.value)}
             required
           />
+          <p id="email-error">
+{errors.email}
+          </p>
         </div>
         <div>
           <label htmlFor="pass">Password (8 characters minimum):</label>

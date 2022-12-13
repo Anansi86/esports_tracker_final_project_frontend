@@ -9,6 +9,7 @@ import {
   class AuthService {
     constructor() {
       this.login = this.login.bind(this);
+      this.register = this.register.bind(this);
     }
   
     async login(username, password) {
@@ -28,7 +29,7 @@ import {
   
     logout() {
       localStorage.removeItem("user");
-    }
+    } 
   
     async register({
       username,
@@ -37,7 +38,7 @@ import {
       firstName,
       lastName
     }) {
-      await request({
+      return await request({
         url: REGISTER_ENDPOINT,
         method: 'POST',
         data: {
@@ -49,7 +50,7 @@ import {
         }
       })
       .then(() => {
-        this.login(username, password)
+        return this.login(username, password)
       })
     }
   
