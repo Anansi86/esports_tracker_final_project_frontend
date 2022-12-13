@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import request from "../../services/api.request";
-import PlayerList from "../PlayerList";
 import _ from "lodash";
+
 
 const Team = () => {
   const [team, setTeam] = useState({});
@@ -26,7 +26,11 @@ const Team = () => {
   //const list = player.map((item) => <PlayerList item={item} />);
 
   const playerList = team.players?.map((tm) => {
-    return <Link to='/player' key={tm.id} className="row">{tm.player_name}</Link>;
+    return (
+      <Link to={"/player/" + tm.id} key={tm.id} className="btn btn-secondary p-0 p-md-3 m-2">
+        {tm.player_name}  {tm.player_num}
+      </Link>
+    );
   });
 
   return (
@@ -44,10 +48,15 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <div className="col-6">
-        {playerList}
+      <div className="col-sm-6">
+        <div className="list-group">
+          
+          {playerList}
+            
+        </div>
       </div>
     </div>
+    
   );
 };
 

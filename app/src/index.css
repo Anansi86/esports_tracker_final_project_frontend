@@ -9,7 +9,11 @@
 }
 
 .team_icon {
-    max-width:100%;
+    max-width: 100%;
+}
+
+.team_icon_small {
+    max-width: 40px;
 }
 
 .card {
@@ -20,4 +24,74 @@
 
 .player-image {
     max-width:100%;
+}
+
+
+
+#team_icon {
+    height: 50%;
+    width: auto;
+}
+
+.schedule_column {
+    height: 100px;
+}
+
+#team1 {
+    text-align: right;
+}
+
+#team2 {
+    text-align: left;
+}
+
+.point_column, .date{
+    height: 50px;
+    text-align: center;
+    align-self: center;
+}
+
+.col.replay {
+    text-align: right;
+}
+
+#carousel iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.rein {
+    width: 200px;
+    height: 278px;
+}
+
+.tracer {
+    width: 200px;
+    height: 278px;
+}
+
+.homecard {
+    max-width: 100%;
+}
+
+.banner {
+    /* height: 65%; */
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.bliz {
+    width: 18vh;
+}
+
+.owl {
+    width: 25vh;
+} 
+
+.linksImage {
+    max-height: 138.42px;
+}
+
+.hero_icon {
+    object-fit: contain;
 }

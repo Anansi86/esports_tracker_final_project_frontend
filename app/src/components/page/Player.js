@@ -1,21 +1,41 @@
-import React, { useState } from "react"
-import AuthService from "../../services/auth.service";
-import { useNavigate } from 'react-router-dom';
-import { useGlobalState } from "../../context/GlobalState";
-import jwtDecode from "jwt-decode";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import request from "../../services/api.request";
+import _ from "lodash";
+import 'bootstrap/dist/js/bootstrap.js';
+import Team from "./Team";
 
 const Player = () => {
   
+  const [player, setPlayer] = useState({});
+  //const [ player, setPlayer] = useState({});
+
+  let { id } = useParams();
+  //const list = [];
+
+  useEffect(() => {
+    async function getData() {
+      const responsePlayer = await request({
+        method: "GET",
+        url: "Player/" + id + "/",
+      });
+
+      setPlayer(responsePlayer.data);
+      console.log(responsePlayer.data)
+
+    }
+    getData();
+  }, []);
+
     return (
       <div className="row">
         <div className="col-sm-6">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">Blake Scott</h5>
+              <h5 className="card-title">{player.player_name}</h5>
               <img
                 className="player-image"
-                src="http://images.blz-contentstack.com/v3/assets/blt321317473c90505c/blt3df8323ae84dfcd3/6273f664ac712c24bbaef8e3/ATL_GATOR_C_22.png"
+                src={player.pic}
               ></img>
             </div>
           </div>
@@ -24,25 +44,22 @@ const Player = () => {
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">Alias</h5>
-              <p>Gator</p>
-              <h5>#1</h5>
+              <p>{player.alias_name}</p>
+                <h5>{player.player_num}</h5>
               <h5 className="card-text">From:</h5>
-              <p>Nashville, Tennessee, USA</p>
-              <a href="#" className="btn btn-primary">
-                Register
-              </a>
+              <p>{player.hometown}</p>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col">Average Atk</div>
-                <div class="col">Avg Eliminations</div>
-                <div class="col">Deaths</div>
+            <div className="container">
+              <div className="row">
+                <div className="col">Total Atk</div>
+                <div className="col">Total Eliminations</div>
+                <div className="col">Total Deaths</div>
               </div>
   
-            <div class="row">
-              <div class="col">43099</div>
-              <div class="col">118</div>
-              <div class="col">36</div>
+            <div className="row">
+              <div className="col">{player.total_damage}</div>
+              <div className="col">{player.total_eliminations}</div>
+              <div className="col">{player. total_deaths}</div>
             </div>
             </div>
           </div>

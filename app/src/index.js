@@ -39,8 +39,10 @@ root.render(
           <Route path="Team" element={<Team />} />
           <Route path="Team/:id" element={<Team />} />
           <Route path="Player" element={<Player />} />
+          <Route path="Player/:id" element={<Player />} />
           <Route path="Schedule" element={<Schedule />} />
           <Route path="Character" element={<Character />} />
+          <Route path="Character/:id" element={<Character />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="profile" element={<Profile />} />
