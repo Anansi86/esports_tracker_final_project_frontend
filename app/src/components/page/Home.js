@@ -8,26 +8,8 @@ import request from "../../services/api.request";
 //import jwtDecode from "jwt-decode";
 
 const Home = () => {
-  // let navigate = useNavigate();
-
-  // useEffect(() => {
-  //   async function getData() {
-  //     const responseMatch = await request({
-  //       method: "GET",
-  //       url: "Match/",
-  //     });
-  //     const responseHero = await request({
-  //       method: "GET",
-  //       url: "Hero/"
-  //     });
-
-  //     setMatches(responseMatch.data);
-  //     setHeroes(responseHero.data);
-
-  //   }
-  //   getData()
   // },[])
-
+  
   return (
     <div className="container">
       <div className="row">
@@ -35,27 +17,27 @@ const Home = () => {
           <img
             className="banner"
             src="./images/hero-overwatch.png"
-          />
+            />
         </div>
       </div>
 
       <div className="row">
-        <div className="col-3">
+        <div className="col-3 d-none d-md-flex">
           <img
             className="rein"
             src="https://static.wikia.nocookie.net/overwatch_gamepedia/images/3/3b/Reinhardt-ow2-portrait.png"
-          />
+            />
         </div>
 
         <div className="col w-100 h-100" id="carousel">
           <Carousel />
         </div>
 
-        <div className="col-3">
+        <div className="col-3 d-none d-md-flex">
           <img
             className="tracer"
             src="https://www.kindpng.com/picc/m/12-120331_hots-tracer-002-tracer-overwatch-png-transparent-png.png"
-          />
+            />
         </div>
       </div>
 
@@ -69,7 +51,7 @@ const Home = () => {
                 <img
                   className="homecard"
                   src="https://www.svg.com/img/gallery/the-untold-truth-of-twitch/intro-1526072501.jpg"
-                />
+                  />
               </p>
             </div>
           </div>
@@ -82,7 +64,7 @@ const Home = () => {
                 <img
                   className="homecard"
                   src="https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/c6/C6KAEFQDUSH51579892313529.png"
-                />
+                  />
               </p>
             </div>
           </div>
@@ -95,7 +77,7 @@ const Home = () => {
                 <img
                   className="homecard"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Blizzard_Entertainment_Logo.svg/2560px-Blizzard_Entertainment_Logo.svg.png"
-                />
+                  />
               </p>
             </div>
           </div>
@@ -106,3 +88,22 @@ const Home = () => {
 };
 
 export default Home;
+
+// let navigate = useNavigate();
+
+// useEffect(() => {
+//   async function getData() {
+//     const responseMatch = await request({
+//       method: "GET",
+//       url: "Match/",
+//     });
+//     const responseHero = await request({
+//       method: "GET",
+//       url: "Hero/"
+//     });
+
+//     setMatches(responseMatch.data);
+//     setHeroes(responseHero.data);
+
+//   }
+//   getData()

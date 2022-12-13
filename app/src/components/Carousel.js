@@ -7,6 +7,7 @@ function Carousel() {
     >
       <div className="carousel-inner">
         <div className="carousel-item active">
+          <div className="ratio ratio-4x3">
           <iframe
             src="https://www.youtube.com/embed/frrMF287eSQ"
             title="YouTube video player"
@@ -14,9 +15,11 @@ function Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+          </div>
         </div>
 
         <div className="carousel-item">
+          <div className="ratio ratio-4x3">
           <iframe
             src="https://www.youtube.com/embed/RxeD6EOoyYs"
             title="YouTube video player"
@@ -24,8 +27,11 @@ function Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+          </div>
         </div>
         <div className="carousel-item">
+
+        <div className="ratio ratio-4x3">
           <iframe
             src="https://www.youtube.com/embed/_Uj-krTQzfI"
             title="YouTube video player"
@@ -33,6 +39,7 @@ function Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+          </div>
         </div>
       </div>
       <button

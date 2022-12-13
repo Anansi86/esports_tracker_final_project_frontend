@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import request from "../../services/api.request";
 import _ from "lodash";
 import 'bootstrap/dist/js/bootstrap.js';
+import Team from "./Team";
 
 const Player = () => {
   

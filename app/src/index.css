@@ -9,7 +9,11 @@
 }
 
 .team_icon {
-    max-width: 30%;
+    max-width: 100%;
+}
+
+.team_icon_small {
+    max-width: 40px;
 }
 
 .card {
@@ -86,4 +90,8 @@
 
 .linksImage {
     max-height: 138.42px;
+}
+
+.hero_icon {
+    object-fit: contain;
 }
