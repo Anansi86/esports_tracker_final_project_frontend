@@ -7,7 +7,7 @@ import jwtDecode from "jwt-decode";
 const Register = () => {
   let navigate = useNavigate();
 
-  const [ state, dispatch ] = useGlobalState();
+  const [ dispatch ] = useGlobalState();
 
   const [user, setUser] = useState({
     username: "",

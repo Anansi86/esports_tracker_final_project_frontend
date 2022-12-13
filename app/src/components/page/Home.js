@@ -9,15 +9,12 @@ import request from "../../services/api.request";
 
 const Home = () => {
   // },[])
-  
+
   return (
     <div className="container">
       <div className="row">
         <div className="col">
-          <img
-            className="banner"
-            src="./images/hero-overwatch.png"
-            />
+          <img className="banner" src="./images/hero-overwatch.png" />
         </div>
       </div>
 
@@ -26,7 +23,7 @@ const Home = () => {
           <img
             className="rein"
             src="https://static.wikia.nocookie.net/overwatch_gamepedia/images/3/3b/Reinhardt-ow2-portrait.png"
-            />
+          />
         </div>
 
         <div className="col w-100 h-100" id="carousel">
@@ -37,7 +34,7 @@ const Home = () => {
           <img
             className="tracer"
             src="https://www.kindpng.com/picc/m/12-120331_hots-tracer-002-tracer-overwatch-png-transparent-png.png"
-            />
+          />
         </div>
       </div>
 
@@ -48,10 +45,12 @@ const Home = () => {
             <div className="card-body">
               <h5 className="card-title">Watch on Twitch!</h5>
               <p>
-                <img
-                  className="homecard"
-                  src="https://www.svg.com/img/gallery/the-untold-truth-of-twitch/intro-1526072501.jpg"
+                <a href="https://www.twitch.tv/overwatchleague">
+                  <img
+                    className="homecard"
+                    src="https://www.svg.com/img/gallery/the-untold-truth-of-twitch/intro-1526072501.jpg"
                   />
+                </a>
               </p>
             </div>
           </div>
@@ -61,10 +60,12 @@ const Home = () => {
             <div className="card-body">
               <h5 className="card-title"> OverWatch League Youtube</h5>
               <p>
-                <img
-                  className="homecard"
-                  src="https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/c6/C6KAEFQDUSH51579892313529.png"
+                <a href="https://www.youtube.com/c/overwatchleague">
+                  <img
+                    className="homecard"
+                    src="https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/c6/C6KAEFQDUSH51579892313529.png"
                   />
+                </a>
               </p>
             </div>
           </div>
@@ -74,10 +75,12 @@ const Home = () => {
             <div className="card-body">
               <h5 className="card-title">Blizzard's Homepage</h5>
               <p>
-                <img
-                  className="homecard"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Blizzard_Entertainment_Logo.svg/2560px-Blizzard_Entertainment_Logo.svg.png"
+                <a href="https://overwatch.blizzard.com/en-us/">
+                  <img
+                    className="homecard"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Blizzard_Entertainment_Logo.svg/2560px-Blizzard_Entertainment_Logo.svg.png"
                   />
+                </a>
               </p>
             </div>
           </div>

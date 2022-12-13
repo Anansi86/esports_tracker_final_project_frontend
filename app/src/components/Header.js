@@ -94,8 +94,8 @@ function GetHeader() {
                 )}
               </ul>
             </div>
-            {!state.currentUser && <Link to="/login">Login</Link>}
-            {!state.currentUser && <Link to="/register">Register</Link>}
+            {!state.currentUser && <Link className="btn btn-secondary p-0 p-md-3 m-2" to="/login">Login</Link>}
+            {!state.currentUser && <Link className="btn btn-secondary p-0 p-md-3 m-2" to="/register">Register</Link>}
 
             {state.currentUser && <p>{state.currentUser.username},&nbsp;</p>}
             {state.currentUser && (

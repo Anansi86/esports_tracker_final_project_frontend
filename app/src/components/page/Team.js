@@ -4,7 +4,6 @@ import request from "../../services/api.request";
 import _ from "lodash";
 
 
-
 const Team = () => {
   const [team, setTeam] = useState({});
   //const [ player, setPlayer] = useState({});
@@ -29,7 +28,7 @@ const Team = () => {
   const playerList = team.players?.map((tm) => {
     return (
       <Link to={"/player/" + tm.id} key={tm.id} className="btn btn-secondary p-0 p-md-3 m-2">
-        {tm.player_name}
+        {tm.player_name}  {tm.player_num}
       </Link>
     );
   });
