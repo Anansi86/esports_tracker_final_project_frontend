@@ -43,7 +43,7 @@ const Register = () => {
           currentUserToken: resp.access,
           currentUser: data
         })
-        navigate('/profile')
+        navigate('/Home')
       }).catch(function(resp) {
             setErrors(resp.data)
       });
