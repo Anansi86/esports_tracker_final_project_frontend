@@ -7,7 +7,7 @@ import jwtDecode from "jwt-decode";
 const Register = () => {
   let navigate = useNavigate();
 
-  const [ dispatch ] = useGlobalState();
+  const [ state, dispatch ] = useGlobalState();
 
   const [user, setUser] = useState({
     username: "",
@@ -45,6 +45,8 @@ const Register = () => {
         })
         navigate('/Home')
       }).catch(function(resp) {
+            console.log("setErrors was called");
+            console.log(resp);
             setErrors(resp.data)
       });
   }
@@ -72,7 +74,7 @@ const Register = () => {
             required
           />
           <p id="email-error">
-{errors.email}
+{errors ? errors.email : ""}
           </p>
         </div>
         <div>
