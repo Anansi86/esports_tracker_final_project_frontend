@@ -1,4 +1,4 @@
-export const API_URL = "https://8000-anansi86-backendesports-v49k1iehw6k.ws-us78.gitpod.io/";
+export const API_URL = "https://esports-tracker-371419.ue.r.appspot.com/";
 export const LOGIN_ENDPOINT = "user/login/"
 export const REGISTER_ENDPOINT = "user/create/"
 export const REFRESH_ENDPOINT = "token/refresh/"

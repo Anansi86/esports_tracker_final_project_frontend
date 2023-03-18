@@ -43,7 +43,7 @@ const Home = () => {
         <div className="col">
           <div className="card h-100">
             <div className="card-body">
-              <h5 className="card-title">Watch on Twitch!</h5>
+              <h5 className="card-title">See on Twitch!</h5>
               <p>
                 <a href="https://www.twitch.tv/overwatchleague">
                   <img
