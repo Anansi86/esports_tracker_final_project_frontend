@@ -43,6 +43,7 @@ const Player = () => {
             <h5>{hero.player_num}</h5>
             <h5 className="card-text">Main Attack</h5>
             <p>{hero.main_attack}</p>
+            <h5 className="card-text">Special Attack</h5>
             <p>{hero.special_attack}</p>
           </div>
         </div>
