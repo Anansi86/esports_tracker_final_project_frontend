@@ -28,9 +28,9 @@
 
 
 
-#team_icon {
-    height: 50%;
-    width: 100%;
+.team_icon_team {
+    height: 100%;
+    width: 140px;
 }
 
 .schedule_column {
@@ -100,4 +100,9 @@
     width: 100%;
     height: 15vw;
     object-fit: contain;
+}
+
+.card-team  {
+    width: 160px;
+    text-align: center;
 }
