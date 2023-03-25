@@ -52,14 +52,17 @@ const Footer = () => (
         {/* right col */}
         <div className="col-md-4 pb-3">
           <h5 className="text-uppercase">Links</h5>
+          <div className="row">
+
           <img
-            className="col-4 owl"
+            className="p-0 owl"
             src="https://p.kindpng.com/picc/s/377-3771704_overwatch-league-logo-overwatch-league-logo-ai-hd.png"
           />
           <img
-            className="col-4 bliz linksImage"
+            className="p-0 bliz linksImage"
             src="https://seeklogo.com/images/B/Blizzard_Entertainment-logo-6A5908AC72-seeklogo.com.png"
           />
+          </div>
         </div>
       </div>
     </div>

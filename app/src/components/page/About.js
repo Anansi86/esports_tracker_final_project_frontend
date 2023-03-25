@@ -39,7 +39,7 @@ const About = () => {
         </div>
         <div className="row">
           {heroes.map((hero) => (
-            <div className="col p-3 d-flex flex-column position-static">
+            <div key={hero.id} className="col p-3 d-flex flex-column position-static">
               <div className="card h-100">
                 <div className="card-body ">
                   <h5 className="card-title">{hero.name}</h5>
